@@ -1,0 +1,47 @@
+.footer {
+    padding: 90px 10px 0;
+    
+    background-image: url("assets/footer-background-min.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    > a {
+        display: block;
+        max-width: 200px;
+        margin: 0 auto 60px;
+        
+        img {
+            display: block;
+        }
+    }
+    
+    .social {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        
+        a {
+            display: block;
+            margin: 0 10px;
+            img {
+                display: block;
+            }
+        }
+    }
+    
+    .division {
+        width: 100%;
+        border-bottom: 1px solid fade(@color-text, 20%);
+    }
+    
+    .copy {
+        padding: 25px 0;
+        text-align: center;
+        
+        p {
+            .font-roboto;
+            font-size: 12px;
+            margin: 0;
+        }
+    }
+}

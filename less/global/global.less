@@ -1,0 +1,28 @@
+@import './fonts.less';
+@import './colors.less';
+@import './variables.less';
+@import './text.less';
+
+html {
+    .font-lato;
+    
+    box-sizing: border-box;
+}
+
+html, body {
+    background: @color-purple-dark;
+}
+
+
+*, *:before, *:after {
+    font-family: inherit;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.max-width {
+    max-width: @max-width;
+    margin: 0 auto;
+    width: 100%;
+}

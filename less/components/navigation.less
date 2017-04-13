@@ -1,0 +1,128 @@
+.navigation {
+    padding-top: 20px;
+    background: @color-purple;
+    
+    .footer & {
+        background: transparent;
+        margin-bottom: 40px;
+        
+        .menu {
+            margin: 0 auto;
+            
+            a {
+                color: @color-white;
+                opacity: 0.9;
+                
+                &:after {
+                    display: none;
+                }
+            }
+            
+            @media(max-width: 620px) {
+                display: none;
+            }
+        }
+    }
+    .navigation__wrapper {
+        .max-width;
+        
+        padding: 0 10px;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 100;
+    }
+    
+    @media(max-width: 620px) {
+        padding-top: 0;
+    }
+}
+
+.logo {
+    a {
+        text-decoration: none;
+    }
+}
+        
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    a {
+        color: @color-text;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 15px 0px;
+        position: relative;
+        
+
+        &:hover:after {
+            width: 100%;
+        }
+        
+        
+        &:after {
+            content: ' ';
+            width: 0%;
+            height: 2px;
+            background: @color-brand;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transition: width 0.2s ease-in-out;
+        }
+        
+        &:not(:last-of-type) {
+            margin: 0 40px 0 0;
+        }
+        
+        &.active, &:hover {
+            color: @color-white;
+            
+            &:after {
+                width: 100%;
+            }
+        }
+    }
+    
+    @media(max-width: 620px) {
+        top: 50px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        background: @color-purple;
+        display: none;
+        text-align: center;
+        padding-bottom: 20px;
+        
+        a {
+            display: block;
+            
+            &:not(:last-of-type) {
+                margin: 0;
+            }
+            
+            &:after {
+                display: none;
+            }
+        }
+    }
+    
+            
+
+}
+    
+
+
+.hamburger {
+    display: none;
+    
+    @media(max-width: 620px) {
+        display: inline-block;
+    }
+}

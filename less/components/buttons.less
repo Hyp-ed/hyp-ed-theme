@@ -1,0 +1,31 @@
+@button-height: 50px;
+
+.button {
+    .font-roboto;
+    font-size: 14px;
+    font-weight: 500;
+    display: block;
+    width: 270px;
+    height: @button-height;
+    background: @color-brand;
+    border-radius: 2px;
+    box-shadow: 0px 5px 15px 0px rgba(59, 34, 120, 0.25);
+    line-height: @button-height;
+    color: @color-white;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    
+    &:hover, .active {
+        background: darken(@color-brand, 10%);
+        
+    }
+    
+    &.center {
+        margin: 0 auto;
+    }
+    
+    @media(max-width: 620px) {
+        width: 200px;
+    }
+}

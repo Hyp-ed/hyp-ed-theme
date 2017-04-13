@@ -1,0 +1,27 @@
+p {
+    color: @color-text;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    
+    a {
+        color: @color-text;
+    }
+    
+    @media(max-width: 620px) {
+        font-size: 16px;
+        line-height: 28px;
+    }
+}
+
+.center-text {
+    text-align: center;
+}
+
+.text-block {
+    .center-text;
+    
+    max-width: 620px;
+    margin: 0 auto;
+}
