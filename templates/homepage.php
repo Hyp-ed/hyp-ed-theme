@@ -11,7 +11,7 @@ get_header();
     <div class="hero__wrapper">
         <div class="hero__claim">
             <h2>When hours become minutes</h2>
-            <p>We are HypED. A team of 50 students from the University of Edinburgh’s Engineering, Economic and Business Schools. We are collaborating to develop Hyperloop and build the future of transportation.</p>
+            <p>We are HypED. A team of 50 students from the University of Edinburgh’s Engineering, Informatics, Economic and Business Schools. We are collaborating to develop Hyperloop and build the future of transportation.</p>
             <a href="#" class="button">Learn More</a>
         </div>
     </div>
