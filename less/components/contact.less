@@ -7,6 +7,11 @@
     
     .heading {
         margin-bottom: 110px;
+        
+        @media(max-width: 868px) {
+            margin-bottom: 20px;
+            flex-basis: initial;
+        }
     }
     
     .contact__row {
@@ -22,10 +27,21 @@
                 display: block;
             }
             
+            &:nth-child(1) {
+                @media(max-width: 868px) {
+                    display: none;
+                }
+            }
+            
             
             &:nth-child(2) {
                 margin-left: 100px;
                 flex-basis: 320px;
+                
+                @media(max-width: 868px) {
+                    margin-left: 0;
+                    flex-basis: 100%;
+                }
             }
         }
     }
@@ -74,8 +90,35 @@
     .form__wrapper {
         max-width: 320px;
         
+        @media(max-width: 868px) {
+            max-width: initial;
+        }
+        
         .button {
             width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+    
+    .success {
+        p {
+            background: @color-success;
+            margin-bottom: 6px;
+            color: @color-white;
+            border-radius: 2px;
+            padding: 2px 15px;
+            font-size: 14px;
+        }
+    }
+    
+    .errors {
+        p {
+            background: @color-error;
+            margin-bottom: 6px;
+            color: @color-white;
+            border-radius: 2px;
+            padding: 2px 15px;
+            font-size: 14px;
         }
     }
 }

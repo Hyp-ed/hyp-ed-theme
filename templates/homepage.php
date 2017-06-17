@@ -10,14 +10,13 @@ get_header();
 <div class="hero">
     <div class="hero__wrapper">
         <div class="hero__claim">
-            <h2>When hours become minutes</h2>
-            <p>We are HypED. A team of 50 students from the University of Edinburgh’s Engineering, Informatics, Economic and Business Schools. We are collaborating to develop Hyperloop and build the future of transportation.</p>
-            <a href="#" class="button">Learn More</a>
+            <h2><?php the_field('hero_heading'); ?></h2>
+            <p><?php the_field('hero_text'); ?></p>
+            <a href="<?php the_field('hero_learn_more_link'); ?>" target="_blank" class="button">Learn More</a>
         </div>
     </div>
 </div>
-
-<div class="about">
+<div class="about" id="about">
     <div class="about__wrapper">
         <div class="heading">
             <div class="heading__wrapper">
@@ -38,7 +37,7 @@ get_header();
     </div>
 </div>
 
-<div class="team">
+<div class="team" id="team">
     <div class="heading light">
         <div class="heading__wrapper">
             <div class="heading__background">The Team</div>
@@ -51,7 +50,7 @@ get_header();
     <a href="/team" class="button center">Meet the Team</a>
 </div>
 
-<div class="contact">
+<div class="contact" id="contact">
     <div class="heading">
         <div class="heading__wrapper">
             <div class="heading__background">Contact</div>
@@ -65,29 +64,18 @@ get_header();
         <div class="contact__column">
             <div class="form__wrapper">
                 <div class="input__wrapper">
-                    <input type="name" name="name" placeholder="Name">
+                    <input type="text" name="name" placeholder="Name *">
                 </div>
                 <div class="input__wrapper">
-                    <input type="email" name="email" placeholder="Email">
+                    <input type="email" name="email" placeholder="Email *">
                 </div>
                 <div class="input__wrapper">
-                    <textarea name="message" cols="30" rows="5" placeholder="Message"></textarea>
+                    <textarea name="message" cols="30" rows="5" placeholder="Message *"></textarea>
                 </div>
                 <a href="#" class="button">Send</a>
+                <div class="errors"></div>
+                <div class="success"></div>
             </div>
-            <script>
-                /* global $ */
-                $('.form__wrapper input, .form__wrapper textarea').focus(function(e) {
-                    $(this).parent().addClass('active');
-                });
-                
-                $('.form__wrapper input, .form__wrapper textarea').focusout(function(e) {
-                    var input = $(this);
-                    if(input.val().length == 0) {
-                        input.parent().removeClass('active');
-                    }
-                });
-            </script>
         </div>
     </div>
 </div>

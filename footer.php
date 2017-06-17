@@ -38,7 +38,7 @@
     </div>
     <div class="division"></div>
     <div class="copy">
-        <p>&copy;Hyped 2016. All rights reserved</p>
+        <p>&copy;Hyped 2017. All rights reserved</p>
     </div>
 </div>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/scripts/scripts.js"></script>
